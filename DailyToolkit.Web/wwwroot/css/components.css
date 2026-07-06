@@ -1,0 +1,69 @@
+.tool-card {
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .35s;
+    border: 1px solid #E2E8F0;
+}
+
+    .tool-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    }
+
+    .tool-card h5 {
+        font-weight: 600;
+    }
+.tool-item {
+    border: none;
+    border-radius: 20px;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+    .tool-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    }
+
+    .tool-item .card-body {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .tool-item h5 {
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    .tool-item p {
+        min-height: 50px;
+    }
+.feature-box {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+    transition: .3s;
+    height: 100%;
+}
+
+    .feature-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.08);
+    }
+
+    .feature-box i {
+        font-size: 55px;
+        color: #2563EB;
+    }
+
+    .feature-box h5 {
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .feature-box p {
+        color: #6B7280;
+        margin-top: 15px;
+    }

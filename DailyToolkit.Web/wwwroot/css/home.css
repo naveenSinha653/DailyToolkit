@@ -1,0 +1,32 @@
+.hero {
+    padding: 100px 0;
+    background: #F8FAFC;
+}
+
+    .hero h1 {
+        font-weight: 700;
+        color: #0F172A;
+    }
+
+    .hero p {
+        color: #64748B;
+    }
+
+    .hero img {
+        animation: float 4s infinite;
+    }
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

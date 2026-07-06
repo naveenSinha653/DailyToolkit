@@ -1,0 +1,8 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+}
+
+main {
+    min-height: 80vh;
+}

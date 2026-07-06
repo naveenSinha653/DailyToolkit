@@ -1,0 +1,60 @@
+.navbar-brand {
+    font-size: 28px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+footer {
+    margin-top: 80px;
+}
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 230px;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+    .dropdown-item:hover {
+        background: #0d6efd;
+        color: white;
+    }
+
+.dropdown-menu {
+    animation: fadeMenu .2s ease;
+}
+
+@keyframes fadeMenu {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

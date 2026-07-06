@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <title>@ViewData["Title"] - DailyToolkit</title>
+    <meta name="description" content="DailyToolkit provides free online PDF, Image, Resume, Developer and Calculator tools." />
+
+    <meta name="keywords" content="PDF Tools, Merge PDF, Split PDF, Image to PDF, Resume Builder, Online Tools" />
+
+    <meta name="author" content="DailyToolkit" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title"  content="DailyToolkit" />
+
+    <meta property="og:description" content="Free Online PDF, Image and Developer Tools." />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" content="/images/logo.png" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/shared.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    @await Html.PartialAsync("_Header")
+
+    <main>
+        @RenderBody()
+    </main>
+    @await Html.PartialAsync("_Loader")
+
+    @await Html.PartialAsync("_Toast")
+    @await Html.PartialAsync("_Footer")
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/layout.js" asp-append-version="true"></script>
+    <script src="~/js/home.js" asp-append-version="true"></script>
+
+    <script src="~/js/shared.js" asp-append-version="true"></script>
+    <script src="~/js/components/fileUploader.js"></script>
+    <script src="~/js/components/httpClient.js"></script>
+    <script src="~/js/components/downloadManager.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
