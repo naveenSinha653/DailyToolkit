@@ -24,5 +24,9 @@ namespace DailyToolkit.Web.Controllers
 
             return View(model);
         }
+        //public IActionResult Index()
+        //{
+        //    return Content("Application Started Successfully");
+        //}
     }
 }

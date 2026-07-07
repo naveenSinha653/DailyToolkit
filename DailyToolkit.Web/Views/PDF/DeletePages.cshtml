@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Delete PDF Pages";
+}
+
+<link href="~/css/pdf/deletePages.css" rel="stylesheet" />
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="fw-bold">
+            Delete PDF Pages
+        </h1>
+
+        <p class="text-muted">
+            Remove one or more pages from your PDF.
+        </p>
+
+    </div>
+
+    <div id="dropArea" class="upload-area">
+
+        <i class="bi bi-file-earmark-pdf-fill display-1 text-danger"></i>
+
+        <h3 class="mt-3">
+
+            Drag & Drop PDF Here
+
+        </h3>
+
+        <p class="text-muted">or</p>
+
+        <input type="file"
+               id="pdfInput"
+               accept=".pdf"
+               hidden />
+
+        <button id="browseButton"
+                class="btn btn-primary btn-lg">
+
+            Browse PDF
+
+        </button>
+
+    </div>
+
+    <div class="mt-4">
+
+        <h5>
+
+            Selected File :
+            <span id="fileName">
+
+                None
+
+            </span>
+
+        </h5>
+
+    </div>
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-header fw-bold">
+
+            Delete Pages
+
+        </div>
+
+        <div class="card-body">
+
+            <label class="form-label">
+
+                Pages to delete
+
+            </label>
+
+            <input class="form-control"
+                   id="pages"
+                   placeholder="Example : 2,5,8-10" />
+
+            <small class="text-muted">
+
+                Examples:
+                2
+                2,5
+                2-8
+                2,5,9-12
+
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+
+        <button id="deleteButton"
+                class="btn btn-danger btn-lg"
+                disabled>
+
+            Delete Pages
+
+        </button>
+
+        <button id="clearButton"
+                class="btn btn-outline-secondary btn-lg ms-2">
+
+            Clear
+
+        </button>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <script src="~/js/pdf/deletePages.js"></script>
+}

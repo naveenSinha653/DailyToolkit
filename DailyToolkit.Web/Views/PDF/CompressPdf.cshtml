@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Compress PDF";
+}
+
+<link rel="stylesheet" href="~/css/pdf/compressPdf.css" />
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1 class="display-5 fw-bold">
+            Compress PDF
+        </h1>
+
+        <p class="text-muted">
+            Reduce PDF size without compromising quality.
+        </p>
+
+    </div>
+
+    <div id="dropArea" class="upload-area">
+
+        <i class="fas fa-file-pdf pdf-icon"></i>
+
+        <h2>Drag & Drop PDF Here</h2>
+
+        <p>or</p>
+
+        <input type="file"
+               id="pdfInput"
+               accept=".pdf"
+               hidden />
+
+        <button id="browseButton"
+                type="button"
+                class="btn btn-primary btn-lg">
+
+            Browse PDF
+
+        </button>
+
+        <small class="d-block mt-3 text-muted">
+
+            Supported Format : PDF
+
+        </small>
+
+    </div>
+
+    <div class="alert alert-secondary mt-4" id="selectedFile">
+
+        No file selected.
+
+    </div>
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-header fw-bold">
+
+            Compression Level
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="form-check mb-3">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="quality"
+                       id="low"
+                       value="90">
+
+                <label class="form-check-label">
+
+                    Low Compression (Best Quality)
+
+                </label>
+
+            </div>
+
+            <div class="form-check mb-3">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="quality"
+                       id="medium"
+                       value="70"
+                       checked>
+
+                <label class="form-check-label">
+
+                    Balanced (Recommended)
+
+                </label>
+
+            </div>
+
+            <div class="form-check">
+
+                <input class="form-check-input"
+                       type="radio"
+                       name="quality"
+                       id="high"
+                       value="40">
+
+                <label class="form-check-label">
+
+                    Maximum Compression
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+
+        <button id="compressButton"
+                class="btn btn-success btn-lg"
+                disabled>
+
+            Compress PDF
+
+        </button>
+
+        <button id="clearButton"
+                class="btn btn-outline-danger btn-lg ms-2">
+
+            Clear
+
+        </button>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    <script src="~/js/pdf/compressPdf.js"></script>
+}

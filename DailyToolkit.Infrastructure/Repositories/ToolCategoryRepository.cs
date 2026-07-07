@@ -13,10 +13,12 @@ namespace DailyToolkit.Infrastructure.Repositories
         public ToolCategoryRepository(IConfiguration configuration)
         {
             _configuration = configuration;
+           
         }
 
         public async Task<List<ToolCategory>> GetAllAsync()
         {
+
             using var connection = new SqlConnection(
                 _configuration.GetConnectionString("DefaultConnection"));
 

@@ -13,5 +13,10 @@ namespace DailyToolkit.Application.Interfaces
             List<IFormFile> images);
         Task<byte[]> MergePdfAsync(List<IFormFile> files);
         Task<byte[]> SplitPdfAsync( IFormFile file,string pageRange);
+        Task<byte[]> CompressPdfAsync(
+    IFormFile file,
+    int quality);
+        Task<byte[]> RotatePdfAsync(IFormFile file, int rotation);
+        Task<byte[]> DeletePagesAsync(IFormFile file, string pages);
     }
 }

@@ -1,0 +1,39 @@
+﻿.upload-area {
+    border: 3px dashed #0d6efd;
+    border-radius: 20px;
+    padding: 70px;
+    text-align: center;
+    transition: .3s;
+    background: #fafafa;
+}
+
+    .upload-area.drag {
+        background: #eaf3ff;
+        border-color: #198754;
+    }
+
+.pdf-icon {
+    font-size: 90px;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+.upload-area h2 {
+    margin-bottom: 10px;
+}
+
+#selectedFile {
+    font-size: 18px;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.btn-success {
+    min-width: 220px;
+}
+
+.spinner-border-sm {
+    margin-right: 8px;
+}

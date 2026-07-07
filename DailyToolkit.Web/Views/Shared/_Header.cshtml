@@ -54,7 +54,7 @@
 
                                 </a>
                             </li>
-
+                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a class="dropdown-item"
                                    asp-controller="Pdf"
@@ -64,6 +64,7 @@
 
                                 </a>
                             </li>
+                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a class="dropdown-item"
                                    asp-controller="Pdf"
@@ -73,24 +74,64 @@
 
                                 </a>
                             </li>
-
                             <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item"
+                                   asp-controller="Pdf"
+                                   asp-action="CompressPdf">
+
+                                    Compress PDF
+
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item"
+                                   asp-controller="Pdf"
+                                   asp-action="RotatePdf">
+
+                                    Rotate PDF
+
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item"
+                                   asp-controller="Pdf"
+                                   asp-action="ProtectPdf">
+
+                                    Protect PDF
+
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item"
+                                   asp-controller="Pdf"
+                                   asp-action="WatermarkPdf" disabled>
+
+                                    Add Watermark
+
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item"
+                                   asp-controller="Pdf"
+                                   asp-action="DeletePages">
+
+                                    Delete Pages
+
+                                </a>
+                            </li>
 
                            
 
-                            <li>
-                                <a class="dropdown-item disabled">
+                           
 
-                                    Compress PDF
-                                </a>
-                            </li>
+                           
 
-                            <li>
-                                <a class="dropdown-item disabled">
-
-                                    Rotate PDF
-                                </a>
-                            </li>
+                           
 
                         </ul>
 

@@ -22,6 +22,17 @@ namespace DailyToolkit.Infrastructure.Services
             _imageProcessor = imageProcessor;
         }
 
+        public async Task<byte[]> CompressPdfAsync(
+     IFormFile file,
+     int quality)
+        {
+            using var ms = new MemoryStream();
+
+            await file.CopyToAsync(ms);
+
+            return ms.ToArray();
+        }
+
         public async Task<byte[]> ConvertImagesAsync(List<IFormFile> images)
         {
             var validation = await _imageProcessor.ValidateAsync(images);
@@ -168,6 +179,32 @@ namespace DailyToolkit.Infrastructure.Services
             pages.Sort();
 
             return pages;
+        }
+        public async Task<byte[]> RotatePdfAsync(IFormFile file, int rotation)
+        {
+            using var input = new MemoryStream();
+
+            await file.CopyToAsync(input);
+
+            input.Position = 0;
+
+            var document = PdfReader.Open(input, PdfDocumentOpenMode.Modify);
+
+            foreach (var page in document.Pages)
+            {
+                page.Rotate = rotation;
+            }
+
+            using var output = new MemoryStream();
+
+            document.Save(output, false);
+
+            return output.ToArray();
+        }
+
+        public Task<byte[]> DeletePagesAsync(IFormFile file, string pages)
+        {
+            throw new NotImplementedException();
         }
     }
 }
